@@ -1,12 +1,12 @@
 {
-    "name": "misd/linkify",
+    "name": "freeloapp/linkify",
     "type": "library",
     "description": "Converts URLs and email addresses in text into HTML links",
     "keywords": ["url", "email address", "convert", "link"],
-    "homepage": "https://github.com/misd-service-development/php-linkify",
+    "homepage": "https://github.com/freeloapp/linkify",
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/misd-service-development/php-linkify/issues"
+        "issues": "https://github.com/freeloapp/linkify/pulls"
     },
     "require": {
         "php": ">=7.4",
