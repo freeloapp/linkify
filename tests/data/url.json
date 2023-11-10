@@ -247,6 +247,10 @@
         {
             "test": "https://www.example.com/a_(aaaaaaaaaaaaaaaaa)a",
             "expected": "<a href=\"https://www.example.com/a_(aaaaaaaaaaaaaaaaa)a\">https://www.example.com/a_(aaaaaaaaaaaaaaaaa)a</a>"
+        },
+        {
+            "test": "<div></div> www.example.business/example/example",
+            "expected": "<div></div> <a href=\"http://www.example.business/example/example\">www.example.business/example/example</a>"
         }
     ]
 }
