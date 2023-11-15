@@ -103,10 +103,6 @@
             "expected": ".<a href=\"http://www.example.com\">http://www.example.com</a>"
         },
         {
-            "test": "/http://www.example.com",
-            "expected": "/<a href=\"http://www.example.com\">http://www.example.com</a>"
-        },
-        {
             "test": "\"http://www.example.com\"",
             "expected": "\"<a href=\"http://www.example.com\">http://www.example.com</a>\""
         },
@@ -177,10 +173,6 @@
         {
             "test": "http://www.example.com/~example/example.html",
             "expected": "<a href=\"http://www.example.com/~example/example.html\">http://www.example.com/~example/example.html</a>"
-        },
-        {
-            "test": "examplehttp://www.example.com",
-            "expected": "example<a href=\"http://www.example.com\">http://www.example.com</a>"
         },
         {
             "test": "examplewww.example.com/",
@@ -263,6 +255,10 @@
         {
             "test": "sftp://root@example.com/example/example",
             "expected": "<a href=\"sftp://root@example.com/example/example\">sftp://root@example.com/example/example</a>"
+        },
+        {
+            "test": "mv /home/vmail/ /home/vmail/example.com/foo/bar",
+            "expected": "mv /home/vmail/ /home/vmail/example.com/foo/bar"
         }
     ]
 }

@@ -141,6 +141,7 @@ class Linkify implements LinkifyInterface
     protected function linkifyUrls($text, $options = array('attr' => ''))
     {
         $pattern = '~(?xi)
+              (?:^|(?<![/\w-]))                       # specify boundary for start of the link
               (?:
                 ((ht|sf|f)tps?://)                   # scheme://
                 |                                    #   or
