@@ -142,7 +142,7 @@ class Linkify implements LinkifyInterface
     {
         $pattern = '~(?xi)
               (?:
-                ((ht|f)tps?://)                      # scheme://
+                ((ht|sf|f)tps?://)                   # scheme://
                 |                                    #   or
                 www\d{0,3}\.                         # "www.", "www1.", "www2." ... "www999."
                 |                                    #   or
@@ -164,7 +164,7 @@ class Linkify implements LinkifyInterface
 
         $callback = function ($match) use ($options) {
             $caption = $match[0];
-            $pattern = "~^(ht|f)tps?://~";
+            $pattern = "~^(ht|sf|f)tps?://~";
 
             if (0 === preg_match($pattern, $match[0])) {
                 $match[0] = 'http://' . $match[0];
@@ -195,7 +195,7 @@ class Linkify implements LinkifyInterface
     {
         $pattern = '~(?xi)
                 \b
-                (?<!=)           # Not part of a query string
+                (?<![=\/])       # Not part of a query string
                 [A-Z0-9._\'%+-]+ # Username
                 @                # At
                 [A-Z0-9.-]+      # Domain
