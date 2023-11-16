@@ -68,7 +68,11 @@
         },
         {
             "test": "http://www.example.com/example-example/-",
-            "expected": "<a href=\"http://www.example.com/example-example/\">http://www.example.com/example-example/</a>-"
+            "expected": "<a href=\"http://www.example.com/example-example/-\">http://www.example.com/example-example/-</a>"
+        },
+        {
+            "test": "example http://www.example.com/example-example-md5-",
+            "expected": "example <a href=\"http://www.example.com/example-example-md5-\">http://www.example.com/example-example-md5-</a>"
         },
         {
             "test": "www.example.com/example?fdasfs=24fa3fd32",

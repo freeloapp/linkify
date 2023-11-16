@@ -159,7 +159,7 @@ class Linkify implements LinkifyInterface
               (?:                                    # End with:
                 \((?>[^\s()<>]+|(\([^\s()<>]+\)))*\) # balanced parens, up to 2 levels
                 |                                    #   or
-                [^\s`!\-()\[\]{};:\'".,<>?«»“”‘’]    # not a space or one of these punct chars
+                [^\s`!()\[\]{};:\'".,<>?«»“”‘’]    # not a space or one of these punct chars
               )
         ~u';
 
