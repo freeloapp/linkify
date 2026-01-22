@@ -263,6 +263,10 @@
         {
             "test": "mv /home/vmail/ /home/vmail/example.com/foo/bar",
             "expected": "mv /home/vmail/ /home/vmail/example.com/foo/bar"
+        },
+        {
+            "test": "https://example.com/search?filter=[{%22field%22:%22name%22,%22value%22:%22test%22}]",
+            "expected": "<a href=\"https://example.com/search?filter=[{%22field%22:%22name%22,%22value%22:%22test%22}]\">https://example.com/search?filter=[{%22field%22:%22name%22,%22value%22:%22test%22}]</a>"
         }
     ]
 }

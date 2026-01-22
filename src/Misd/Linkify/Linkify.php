@@ -152,12 +152,20 @@ class Linkify implements LinkifyInterface
                 [a-z0-9.\-]+\.[a-z]{2,4}(?=/)        # looks like domain name followed by a slash
               )
               (?:                                    # Zero or more:
-                [^\s()<>]+                           # Run of non-space, non-()<>
+                [^\s()<>\[\]{}]+                           # Run of non-space, non-()<>
                 |                                    #   or
                 \((?>[^\s()<>]+|(\([^\s()<>]+\)))*\) # balanced parens, up to 2 levels
+                |                                    #   or
+                \[(?>[^\s\[\]]+|(\[[^\s\[\]]+\]))*\] # balanced brackets, up to 2 levels
+                |                                    #   or
+                \{(?>[^\s{}]+|(\{[^\s{}]+\}))*\}     # balanced braces, up to 2 levels
               )*
               (?:                                    # End with:
                 \((?>[^\s()<>]+|(\([^\s()<>]+\)))*\) # balanced parens, up to 2 levels
+                |                                    #   or
+                \[(?>[^\s\[\]]+|(\[[^\s\[\]]+\]))*\] # balanced brackets, up to 2 levels
+                |                                    #   or
+                \{(?>[^\s{}]+|(\{[^\s{}]+\}))*\}     # balanced braces, up to 2 levels
                 |                                    #   or
                 [^\s`!()\[\]{};:\'".,<>?«»“”‘’]    # not a space or one of these punct chars
               )
